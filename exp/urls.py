@@ -6,4 +6,5 @@ urlpatterns = [
     path('api2/',views.viewplace.as_view(),name='api2'),
     path('api3/',views.viewhotel.as_view(),name='api3'),
     path('api4/',views.viewlodge.as_view(),name='api4'),
+    path('api5/',views.viewfood.as_view(),name='api5'),
 ]

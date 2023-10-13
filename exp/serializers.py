@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import cab,Hotels,lodge,places
+from .models import cab,Hotels,lodge,places,food
 class apicab(serializers.ModelSerializer):
     class Meta:
         model=cab
@@ -19,4 +19,8 @@ class apilodge(serializers.ModelSerializer):
     class Meta:
         model=lodge
         fields=('name','contacts','address','typeOfroom','total_rooms')
+class apifood(serializers.ModelSerializer):
+    class Meta:
+        model=food
+        fields='__all__'
         

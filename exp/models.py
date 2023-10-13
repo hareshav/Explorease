@@ -26,7 +26,9 @@ class places(models.Model):
     place_name=models.CharField(max_length=100)
     place_desc=models.CharField(max_length=100)
     location=models.CharField(max_length=100)
-    pimage=models.CharField(max_length=100000,null=True)
+    image=models.CharField(max_length=100000,null=True)
+    image1=models.CharField(max_length=1000000,null=True)
+    image2=models.CharField(max_length=1000000,null=True)
     def __str__(self):
         return self.place_name
 class lodge(models.Model):
@@ -37,3 +39,12 @@ class lodge(models.Model):
     total_rooms=models.IntegerField(null=True,default=0)
     def __str__(self):
         return self.name
+class food(models.Model):
+    image=models.CharField(max_length=100)
+    title=models.CharField(max_length=100)
+    rating=models.FloatField()
+    Location=models.CharField(max_length=1000)
+    type=models.CharField(max_length=100,choices=(('veg','veg'),('Non-veg','Non-veg')))
+    def __str__(self):
+        return self.title
+
